@@ -6,6 +6,7 @@ all:
     - fisher
   links:
     conf.d/brew.fish: ~/.config/fish/conf.d/brew.fish
+    conf.d/cx.fish: ~/.config/fish/conf.d/cx.fish
     config.fish: ~/.config/fish/config.fish
     functions/: ~/.config/fish/functions
 ---
