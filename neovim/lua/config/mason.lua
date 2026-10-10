@@ -69,7 +69,7 @@ local function tools()
 	end
 
 	if vim.fn.executable("npm") == 1 then
-		vim.list_extend(packages, { "markdown-toc", "markdownlint", "markdownlint-cli2", "prettier" })
+		vim.list_extend(packages, { "markdown-toc", "markdownlint", "markdownlint-cli2" })
 	end
 
 	table.sort(packages)

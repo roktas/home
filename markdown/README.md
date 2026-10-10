@@ -2,7 +2,6 @@
 all:
   packages:
     - npm:markdownlint-cli
-    - npm:prettier
   links:
     markdownlintrc: ~/.markdownlintrc
     oxfmtrc.json: ~/.oxfmtrc.json
