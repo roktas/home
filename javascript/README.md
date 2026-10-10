@@ -5,6 +5,7 @@ all:
     - node
     - oxlint
     - oxfmt
+    - npm:svelte
   links:
     environment.d/bun.conf: ~/.config/environment.d/bun.conf
     bunfig.toml: ~/.config/.bunfig.toml
