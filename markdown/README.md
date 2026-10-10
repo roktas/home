@@ -5,9 +5,10 @@ all:
     - npm:prettier
   links:
     markdownlintrc: ~/.markdownlintrc
+    oxfmtrc.json: ~/.oxfmtrc.json
     prettierrc: ~/.prettierrc
 ---
 
 # Markdown
 
-Markdown linting and formatting setup using Markdownlint and Prettier.
+Markdown linting with Markdownlint, Oxfmt formatting, and shared Prettier settings.
