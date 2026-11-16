@@ -8,6 +8,7 @@ macos:
   packages:
     - cask:font-ioskeley-mono
     - cask:ghostty
+    - chafa
 ---
 
 # Ghostty
