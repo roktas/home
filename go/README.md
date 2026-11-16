@@ -6,6 +6,7 @@ all:
   packages:
     - go
     - gofumpt
+    - golangci-lint
 ---
 
 # Go
