@@ -158,6 +158,11 @@ function A --wraps='sudo apt' --description 'alias A sudo apt'
     sudo apt $argv
 end
 
+alias oc 'opencode --auto --continue'
+alias cl 'claude --dangerously-skip-permissions --continue'
+alias co 'codex --yolo resume --last'
+alias ag 'agy --dangerously-skip-permissions --continue'
+
 function b --wraps=bundle --description 'alias b bundle'
     switch $argv[1]
         case "."

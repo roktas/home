@@ -287,6 +287,11 @@ alias ...='cd $(git rev-parse --show-toplevel)'
 alias A='sudo apt'
 alias a=apt
 
+alias oc='opencode --auto --continue'
+alias cl='claude --dangerously-skip-permissions --continue'
+alias co='codex --yolo resume --last'
+alias ag='agy --dangerously-skip-permissions --continue'
+
 b() {
 	local cmd=$1
 	shift
