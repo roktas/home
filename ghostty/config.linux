@@ -42,3 +42,4 @@ keybind = shift+down=decrease_font_size:1
 keybind = ctrl+left=reset_font_size
 keybind = ctrl+up=increase_font_size:1
 keybind = ctrl+down=decrease_font_size:1
+keybind = ctrl+g>r=text:Review the changes.
