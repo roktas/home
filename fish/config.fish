@@ -61,12 +61,19 @@ end
 fish_add_path --move --path "$HOME"/.bun/bin
 fish_add_path --move --path "$HOME"/.local/bin
 fish_add_path --move --path "$HOME"/Dropbox/_/bin
+fish_add_path --move --path "$HOME"/Dropbox/local/bin
 
+set -l platform_dir
 switch (uname -s)
     case Linux
-        fish_add_path --move --path "$HOME"/Dropbox/linux/bin
+        set platform_dir "$HOME"/Dropbox/local/libexec/linux
     case Darwin
-        fish_add_path --move --path "$HOME"/Dropbox/macos/bin
+        set platform_dir "$HOME"/Dropbox/local/libexec/macos
+end
+if test -d "$platform_dir"
+    set -l platform_arch (uname -m)
+    fish_add_path --move --path "$platform_dir/bin"
+    fish_add_path --move --path "$platform_dir/$platform_arch/bin"
 end
 
 set -l clean_path

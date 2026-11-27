@@ -77,10 +77,19 @@ unfunction ruby_user_bin
 path_prepend "$HOME"/.bun/bin
 path_prepend "$HOME"/.local/bin
 path_prepend "$HOME"/Dropbox/_/bin
+[[ ! -d "$HOME"/Dropbox/local/bin ]] || path_prepend "$HOME"/Dropbox/local/bin
+platform_dir=
 case $OSTYPE in
-linux*) path_prepend "$HOME"/Dropbox/linux/bin ;;
-darwin*) path_prepend "$HOME"/Dropbox/macos/bin ;;
+linux*) platform_dir="$HOME"/Dropbox/local/libexec/linux ;;
+darwin*) platform_dir="$HOME"/Dropbox/local/libexec/macos ;;
 esac
+if [[ -d $platform_dir ]]; then
+	platform_arch=$(uname -m)
+	[[ ! -d $platform_dir/bin ]] || path_prepend "$platform_dir/bin"
+	[[ ! -d $platform_dir/$platform_arch/bin ]] || path_prepend "$platform_dir/$platform_arch/bin"
+	unset platform_arch
+fi
+unset platform_dir
 
 export SHELL=$(command -v zsh)
 
